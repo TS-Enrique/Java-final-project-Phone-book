@@ -22,7 +22,6 @@ public class TexasPhoneBook extends PhoneBook{
         throw new IllegalArgumentException("Invalid Texas area code");
         }
 
-
         @Override
         public void WhereFrom() {
 

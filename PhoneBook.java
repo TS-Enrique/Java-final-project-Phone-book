@@ -5,7 +5,7 @@ public abstract class PhoneBook{
     private String name;
     private String job;
 
-    public PhoneBook(int area, int rDigits, String n, String j){
+    public PhoneBook(int areaCode, int remDigits, String name, String job){
         setAreaCode(areaCode);
         setRemDigits(remDigits);
         setName(name);
