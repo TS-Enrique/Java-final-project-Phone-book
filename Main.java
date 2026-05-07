@@ -20,16 +20,37 @@ public class Main {
                 try{
                     System.out.print("Name: ");
                     String name = userInput.nextLine();
+
                     System.out.print("Job: ");
                     String job = userInput.nextLine();
+
+                    System.out.print("State (TX, NM or LA): ");
+                    String state = userInput.nextLine().toUpperCase();
+
                     System.out.print("Area Code (3 digits): ");
                     int areaCode = Integer.parseInt(userInput.nextLine());
+
                     System.out.print("Phone Number (7 digits): ");
-                    int digits = Integer.parseInt(userInput.nextLine()); 
+                    int digits = Integer.parseInt(userInput.nextLine());
+                    
+                    PhoneBook entry;
 
-                    phoneBook.add(new TexasPhoneBook(areaCode, digits, name, job));
+                    if(state.equals("TX")){
+                        entry = new TexasPhoneBook(areaCode, digits, name, job);
+                    }
+                    else if(state.equals("NM")){
+                        entry = new NewMexicoPhoneBook(areaCode, digits, name, job);
+                    }
+                    else if(state.equals("LA")){
+                        entry = new LouisianaPhoneBook(areaCode, digits, name, job);
+                    }
+                    else{
+                        System.out.println("Invalid state. Entry not added.");
+                        continue;
+                    }
+
+                    phoneBook.add(entry);
                     System.out.println("Added successfully!");
-
                 
                 }
                 catch (Exception e){
