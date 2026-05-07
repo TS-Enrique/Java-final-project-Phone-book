@@ -24,7 +24,7 @@ public class Main {
                     System.out.print("Job: ");
                     String job = userInput.nextLine();
 
-                    System.out.print("State (TX, NM or LA): ");
+                    System.out.print("State (TX, NM LA, or OK): ");
                     String state = userInput.nextLine().toUpperCase();
 
                     System.out.print("Area Code (3 digits): ");
@@ -43,6 +43,9 @@ public class Main {
                     }
                     else if(state.equals("LA")){
                         entry = new LouisianaPhoneBook(areaCode, digits, name, job);
+                    }
+                    else if(state.equals("OK")){
+                        entry = new OklahomaPhoneBook(areaCode, digits, name, job);
                     }
                     else{
                         System.out.println("Invalid state. Entry not added.");
