@@ -42,7 +42,7 @@ public abstract class PhoneBook{
     }
 
     protected void validateName(String name){
-        if(name == " "){
+        if(name.isEmpty()){
             throw new IllegalArgumentException("Name must not be empty");
         }
     }
@@ -53,7 +53,7 @@ public abstract class PhoneBook{
     }
 
     protected void validateJob(String job){
-        if(job == " "){
+        if(job.isEmpty()){
             throw new IllegalArgumentException("Job must not be empty");
         }
     }
