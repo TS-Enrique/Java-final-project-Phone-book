@@ -1,3 +1,5 @@
+package phoneStates;
+
 public abstract class PhoneBook{
 
     private int areaCode;
@@ -82,7 +84,5 @@ public abstract class PhoneBook{
                 + digits.substring(3);
     }
 
-    public void WhereFrom(){
-
-    }
+    public abstract void WhereFrom();
 }

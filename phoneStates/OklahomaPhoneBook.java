@@ -1,3 +1,5 @@
+package phoneStates;
+
 public class OklahomaPhoneBook extends PhoneBook{
 
     
@@ -17,7 +19,7 @@ public class OklahomaPhoneBook extends PhoneBook{
             if (areaCode == code)
                 return;  // checks if valid
         }
-        throw new IllegalArgumentException("Invalid New Mexico area code");
+        throw new IllegalArgumentException("Invalid Oklahoma area code");
         }
 
         @Override
